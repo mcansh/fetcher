@@ -23,20 +23,6 @@ build({
   outExtension: { ".js": ".cjs" },
 });
 
-build({
-  ...baseConfig,
-  format: "esm",
-  sourcemap: "inline",
-  outExtension: { ".js": ".debug.mjs" },
-});
-
-build({
-  ...baseConfig,
-  format: "cjs",
-  sourcemap: "inline",
-  outExtension: { ".js": ".debug.cjs" },
-});
-
 function generateTypeDefs(config) {
   let tsc = tsconfig(config);
 
