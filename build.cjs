@@ -4,6 +4,9 @@ let { build, ts, tsconfig, dirname, glob, log } = require("estrella");
 let baseConfig = {
   entryPoints: ["src/index.ts"],
   outdir: "dist",
+  onEnd(config) {
+    generateTypeDefs(config);
+  },
 };
 
 build({
@@ -11,9 +14,6 @@ build({
   format: "esm",
   sourcemap: true,
   outExtension: { ".js": ".mjs" },
-  onEnd(config) {
-    generateTypeDefs(config);
-  },
 });
 
 build({
@@ -21,9 +21,6 @@ build({
   format: "cjs",
   sourcemap: true,
   outExtension: { ".js": ".cjs" },
-  onEnd(config) {
-    generateTypeDefs(config);
-  },
 });
 
 build({
@@ -31,9 +28,6 @@ build({
   format: "esm",
   sourcemap: "inline",
   outExtension: { ".js": ".debug.mjs" },
-  onEnd(config) {
-    generateTypeDefs(config);
-  },
 });
 
 build({
@@ -41,9 +35,6 @@ build({
   format: "cjs",
   sourcemap: "inline",
   outExtension: { ".js": ".debug.cjs" },
-  onEnd(config) {
-    generateTypeDefs(config);
-  },
 });
 
 function generateTypeDefs(config) {
