@@ -8,6 +8,9 @@
     "import": "./dist/index.mjs",
     "require": "./dist/index.cjs"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "./build.cjs",
     "watch": "./build.cjs --watch",
