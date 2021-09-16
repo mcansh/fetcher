@@ -2,7 +2,10 @@
   "name": "@mcansh/fetcher",
   "version": "0.1.1",
   "description": "a wrapper around the fetch api",
-  "main": "dist/index.js",
+  "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "type": "module",
   "exports": {
     "import": "./dist/index.mjs",
@@ -16,8 +19,6 @@
     "watch": "./build.cjs --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
-  "license": "MIT",
   "devDependencies": {
     "@tsconfig/node14": "1.0.1",
     "@types/node": "16.9.1",
