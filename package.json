@@ -1,6 +1,6 @@
 {
   "name": "@mcansh/fetcher",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a wrapper around the fetch api",
   "main": "dist/index.js",
   "type": "module",
