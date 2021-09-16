@@ -9,8 +9,8 @@
     "require": "./dist/index.cjs"
   },
   "scripts": {
-    "build": "./build.mjs",
-    "watch": "./build.mjs --watch",
+    "build": "./build.cjs",
+    "watch": "./build.cjs --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
@@ -19,6 +19,7 @@
     "@tsconfig/node14": "1.0.1",
     "@types/node": "16.9.1",
     "esbuild": "0.12.28",
+    "estrella": "1.4.1",
     "typescript": "4.4.3"
   }
 }
