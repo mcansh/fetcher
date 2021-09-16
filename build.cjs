@@ -4,6 +4,7 @@ let { build, ts, tsconfig, dirname, glob, log } = require("estrella");
 let baseConfig = {
   entryPoints: ["src/index.ts"],
   outdir: "dist",
+  minify: false,
   onEnd(config) {
     generateTypeDefs(config);
   },
