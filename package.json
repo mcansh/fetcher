@@ -4,7 +4,7 @@
   "description": "a wrapper around the fetch api",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "license": "MIT",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "type": "module",
   "exports": {
