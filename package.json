@@ -20,7 +20,8 @@
   "scripts": {
     "build": "./build.cjs",
     "watch": "./build.cjs --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@tsconfig/node14": "1.0.1",
