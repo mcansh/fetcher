@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 let { build, ts, tsconfig, dirname, glob, log } = require("estrella");
 
+/**
+ * @type {import("estrella").BuildConfig}
+ */
 let baseConfig = {
   entryPoints: ["src/index.ts"],
   outdir: "dist",
