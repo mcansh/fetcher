@@ -1,6 +1,6 @@
 {
   "name": "@mcansh/fetcher",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "a wrapper around the fetch api",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "license": "MIT",
