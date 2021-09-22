@@ -6,6 +6,7 @@
   "license": "MIT",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
