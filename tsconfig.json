@@ -2,8 +2,9 @@
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
-    "noEmit": true,
-    "lib": ["DOM"]
+    "lib": ["DOM", "es2017"],
+    "target": "es2017",
+    "incremental": true
   },
   "include": ["src/**/*.ts"]
 }
