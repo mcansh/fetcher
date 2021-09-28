@@ -3,8 +3,13 @@
   "compilerOptions": {
     "outDir": "dist",
     "lib": ["DOM", "es2017"],
+    "declaration": true,
     "target": "es2017",
-    "incremental": true
+    "incremental": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "allowJs": true
   },
   "include": ["src/**/*.ts"]
 }
