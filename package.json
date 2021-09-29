@@ -4,31 +4,32 @@
   "description": "a wrapper around the fetch api",
   "author": "Logan McAnsh <logan@mcan.sh> (https://mcan.sh)",
   "license": "MIT",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "type": "module",
+  "source": "./src/index.ts",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
   "exports": {
-    "./package.json": "./package.json",
+    "./package.json": "./package/json",
     ".": {
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.modern.js",
       "require": "./dist/index.cjs"
     }
   },
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "./build.cjs",
-    "watch": "./build.cjs --watch",
+    "build": "microbundle build src/*.ts",
+    "watch": "microbundle watch src/*.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@tsconfig/node14": "1.0.1",
     "@types/node": "16.9.6",
-    "esbuild": "0.13.0",
-    "estrella": "1.4.1",
+    "microbundle": "0.13.3",
     "typescript": "4.4.3"
   }
 }
