@@ -12,11 +12,11 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-	    "types": {
-		    "import": "./dist/index.d.ts",
-		    "require": "./dist/index.d.cts",
-		    "default": "./dist/index.d.cts"
-	    },
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts",
+        "default": "./dist/index.d.cts"
+      },
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
       "default": "./dist/index.cjs"
@@ -31,7 +31,8 @@
     "build": "tsup && publint",
     "watch": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "format": "prettier --write . --ignore-path .gitignore --ignore-unknown"
   },
   "devDependencies": {
     "@tsconfig/node14": "^14.1.0",
