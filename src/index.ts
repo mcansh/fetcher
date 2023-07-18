@@ -1,3 +1,5 @@
+import type { z } from "zod";
+
 class HTTPError extends Error {
   public response: Response;
   public status: number;
@@ -28,14 +30,16 @@ function checkStatus(response: Response) {
   return response;
 }
 
-async function fetcher<T = unknown>(
+async function fetcher<Schema extends z.Schema>(
   input: RequestInfo,
-  init: RequestInit | undefined = {}
-): Promise<T> {
+  init: RequestInit | undefined = {},
+  schema?: Schema
+): Promise<z.infer<Schema>> {
   const response = await fetch(input, init);
   const verified = await checkStatus(response);
   const result = await verified.json();
-  return result;
+  if (!schema) return result;
+  return schema.parse(result);
 }
 
 export { fetcher, checkStatus, HTTPError };
